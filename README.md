@@ -1,21 +1,31 @@
-# bank
-What I Found No official listing: Cambodia’s National Bank publishes a list of licensed commercial banks.
-No official listing: Cambodia’s National Bank publishes a list of licensed commercial banks. “HUOKAINGTHARA Bank” does not appear in the latest records.
+Corporate Summary: Khmer Bank Legitimacy Review
+Official Listings
+The National Bank of Cambodia (NBC) is the sole authority that licenses and regulates commercial banks in Cambodia.
 
-Possible confusion with Krungthai Bank: The phonetics of “Huokaingthara” resemble “Krungthai” or “Huok Thara,” which may be transliteration issues. Krungthai Bank operates in Phnom Penh and Siem Reap.
+“HUOKAINGTHARA Bank” does not appear in NBC’s official records, meaning it is not recognized as a licensed commercial bank.
 
-Local/private institutions: Sometimes small microfinance institutions or community savings groups are mistaken for banks. These are not licensed commercial banks and may not appear in official listings.
+Possible Confusion
+The name may be a transliteration or spelling variation, potentially mistaken for:
 
-Licensed Bank Example (Closest Match: Krungthai Bank Cambodia)
+Local Khmer institutions (e.g., Huokaing Thara or similar names).
+
+Community savings groups or microfinance institutions (MFIs), which are common in Cambodia but are not licensed as commercial banks.
+
+Local/Private Institutions
+Cambodia has a wide network of MFIs and rural credit operators that provide loans and savings services.
+
+These entities are regulated differently and are not equivalent to commercial banks.
+
+Licensed Khmer Bank Example
 Feature	Details
-Name	Krungthai Bank Public Co., Ltd (Cambodia Branch)
-Branches	Phnom Penh (Road 215, Sangkat Phsar Depo 1, Khan Toulkok) and Siem Reap (Sivatha Road)
-Services	Deposits, loans, debit cards, investment products, insurance
-Hours	Lobby: 09:30 – 17:30 (closed weekends)
-Contact	Phnom Penh: +855 (23) 882‑959 / Siem Reap: +855 (63) 964‑758
-Next Steps
-Clarify spelling: If you meant a specific local institution (perhaps “Huok Thara”), please confirm the exact name.
+Name	Canadia Bank Plc (one of Cambodia’s largest Khmer-owned banks)
+Branches	Nationwide coverage, including Phnom Penh and provincial cities
+Services	Deposits, loans, debit/credit cards, remittances, corporate banking
+Hours	08:00 – 15:30 (Monday–Friday)
+Contact	Head Office (Phnom Penh): +855 (23) 868‑222
+Recommended Next Steps
+Confirm spelling – Ensure the institution’s name is correctly identified (e.g., Huokaingthara).
 
-Check licensing: For safety, always verify that a financial institution is listed with the National Bank of Cambodia before depositing or borrowing.
+Verify licensing – Always check the National Bank of Cambodia’s official list before engaging in financial transactions.
 
-Alternative institutions: If you’re looking for a Cambodian bank with Thai connections, Krungthai Bank is the most relevant.
+Consider Khmer-owned banks – For trusted local options, institutions such as Canadia Bank, ACLEDA Bank, and Cambodia Post Bank are licensed and widely recognized.
