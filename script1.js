@@ -80,4 +80,5 @@ document.addEventListener('click', (e) => {
         renderPhase6Details();
         document.getElementById('phase6Section').scrollIntoView({ behavior: 'smooth' });
     }
+
 });
