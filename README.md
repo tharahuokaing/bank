@@ -19,28 +19,7 @@
 * **Environment:** Node.js (v18+) or Python (3.10+)
 * **Database:** PostgreSQL or MongoDB
 * **Tools:** Docker, Git
-
-### Installation
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/your-repo/huokaing-thara.git](https://github.com/your-repo/huokaing-thara.git)
-    cd huokaing-thara
-    ```
-2.  **Install dependencies:**
-    ```bash
-    npm install  # or pip install -r requirements.txt
-    ```
-3.  **Setup Environment Variables:**
-    Create a `.env` file and add your database credentials and API keys.
-    ```env
-    DB_URL=your_database_url
-    SECRET_KEY=your_secret_key
-    ```
-4.  **Run the application:**
-    ```bash
-    npm start
-    ```
-
+* 
 ## 🛡️ Security & Compliance
 This project is built with financial compliance in mind, adhering to:
 * **PCI-DSS** standards for payment processing.
