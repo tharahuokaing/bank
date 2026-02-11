@@ -32,4 +32,4 @@ We welcome contributions! Please read our `CONTRIBUTING.md` for details on our c
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-© 2026 HUOKAING THARA. All rights reserved.
+© 2029 HUOKAING THARA. All rights reserved.
