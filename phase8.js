@@ -81,4 +81,5 @@ document.addEventListener('click', (e) => {
         renderPhase8Details();
         document.getElementById('phase8Section').scrollIntoView({ behavior: 'smooth' });
     }
+
 });
