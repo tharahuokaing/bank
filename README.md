@@ -19,7 +19,7 @@
 * **Environment:** Node.js (v18+) or Python (3.10+)
 * **Database:** PostgreSQL or MongoDB
 * **Tools:** Docker, Git
-* 
+  
 ## 🛡️ Security & Compliance
 This project is built with financial compliance in mind, adhering to:
 * **PCI-DSS** standards for payment processing.
