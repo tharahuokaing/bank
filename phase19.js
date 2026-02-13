@@ -1,83 +1,70 @@
 /**
- * Phase 18: Investor Relations & Financial Reporting
- * Generates an executive summary for shareholders and analysts.
+ * Phase 19: Bakong CBDC & Blockchain Integration
+ * Simulates DLT-based settlement and KHQR payment rails.
  */
 
-function renderPhase18Details() {
+function renderPhase19Details() {
     const summaryBox = document.getElementById('summaryBox');
-    if (document.getElementById('phase18Section')) return;
+    if (document.getElementById('phase19Section')) return;
 
-    const p18Container = document.createElement('section');
-    p18Container.id = "phase18Section";
-    p18Container.className = "phase-detail-box";
-    p18Container.style.borderLeft = "4px solid #34495e"; // Corporate Navy
-    p18Container.style.padding = "20px";
-    p18Container.style.marginTop = "20px";
-    p18Container.style.background = "rgba(52, 73, 94, 0.05)";
+    const p19Container = document.createElement('section');
+    p19Container.id = "phase19Section";
+    p19Container.className = "phase-detail-box";
+    p19Container.style.borderLeft = "4px solid #e91e63"; // Bakong Pink
+    p19Container.style.padding = "20px";
+    p19Container.style.background = "rgba(233, 30, 99, 0.05)";
 
-    p18Container.innerHTML = `
-        <h2 style="color: #34495e;">Phase 18: Investor Relations Portal</h2>
-        <p>Transparency is the currency of trust. Generate your annual disclosure report.</p>
+    p19Container.innerHTML = `
+        <h2 style="color: #e91e63;">Phase 19: Bakong Gateway (DLT)</h2>
+        <p>Connecting to Hyperledger Iroha for real-time blockchain settlement.</p>
         
-        <div id="reportGenerator" style="background: #111; padding: 20px; border: 1px solid #444;">
-            <h3 style="margin-top:0;">Annual Report Compiler</h3>
-            <button id="compileReportBtn" style="width: 100%; background: #34495e; color: #fff;">Compile Fiscal Report 2026</button>
-            
-            <div id="compiledReport" style="display:none; margin-top: 20px; background: #fff; color: #333; padding: 30px; font-family: 'Times New Roman', serif;">
-                <div style="text-align: center; border-bottom: 2px solid #333; margin-bottom: 20px;">
-                    <h1 style="margin:0;">KHMER BANK PLC.</h1>
-                    <p>Annual Disclosure & Solvency Report</p>
-                </div>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                    <div>
-                        <strong>Capital Stability (Basel IV)</strong>
-                        <p id="repCAR">CAR: --</p>
-                    </div>
-                    <div>
-                        <strong>ESG Performance</strong>
-                        <p id="repESG">Rating: --</p>
-                    </div>
-                </div>
-                <hr>
-                <div style="font-size: 0.9rem; font-style: italic;">
-                    "Our digital core, established in 2024, now serves over 500,000 active users with a focus on sustainable growth and regional stability."
-                </div>
-                <button onclick="window.print()" style="margin-top: 20px; background: #eee; color: #000; font-size: 0.7rem;">Download as PDF</button>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+            <div style="background: #111; padding: 15px; border: 1px solid #444;">
+                <label>Tokenize Assets (USD):</label>
+                <input type="number" id="tokenAmount" value="100" style="width: 100%; margin-top:5px;">
+                <button id="mintTokenBtn" style="margin-top: 10px; width:100%; font-size: 0.8rem;">Mint Digital KHR/USD</button>
             </div>
+            <div style="background: #111; padding: 15px; border: 1px solid #444; text-align: center;">
+                <label>Merchant KHQR</label>
+                <div id="qrPlaceholder" style="width: 100px; height: 100px; background: #222; margin: 10px auto; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; color: #666; border: 1px dashed #e91e63;">
+                    WAITING...
+                </div>
+                <button id="genKHQRBtn" style="font-size: 0.8rem; width:100%;">Generate KHQR</button>
+            </div>
+        </div>
+
+        <div id="blockchainLog" style="background: #000; color: #e91e63; padding: 10px; font-family: monospace; height: 80px; overflow-y: auto; border: 1px solid #444; font-size: 0.75rem;">
+            > Initializing peer-to-peer node...
         </div>
     `;
 
-    summaryBox.appendChild(p18Container);
+    summaryBox.appendChild(p19Container);
 
-    document.getElementById('compileReportBtn').addEventListener('click', compileFinancialData);
+    document.getElementById('mintTokenBtn').addEventListener('click', simulateMinting);
+    document.getElementById('genKHQRBtn').addEventListener('click', generateMockKHQR);
 }
 
-function compileFinancialData() {
-    const report = document.getElementById('compiledReport');
-    const btn = document.getElementById('compileReportBtn');
+function simulateMinting() {
+    const amt = document.getElementById('tokenAmount').value;
+    const log = document.getElementById('blockchainLog');
     
-    // Fetch data from other phases (using IDs we defined earlier)
-    const carVal = document.getElementById('carResult')?.textContent || "18.5%";
-    const esgVal = document.getElementById('esgRating')?.textContent || "A";
-
-    btn.textContent = "Processing Ledger...";
-    
+    log.innerHTML += `<br>> Requesting asset backing from NBC Vault...`;
     setTimeout(() => {
-        document.getElementById('repCAR').textContent = `Capital Adequacy: ${carVal}`;
-        document.getElementById('repESG').textContent = `ESG Rating: ${esgVal}`;
-        
-        report.style.display = "block";
-        btn.textContent = "Report Compiled Successfully";
-        btn.style.background = "#27ae60";
-        
-        logActivity("Phase 18: Investor Disclosure Report generated.");
-    }, 1200);
+        log.innerHTML += `<br>> [BLOCK 0x${Math.random().toString(16).slice(2, 10)}] Minted ${amt} Bakong-USD.`;
+        logActivity(`Phase 19: Tokenized $${amt} into the Bakong ecosystem.`);
+    }, 1000);
 }
 
-// Global listener for Phase 18
+function generateMockKHQR() {
+    const qr = document.getElementById('qrPlaceholder');
+    qr.innerHTML = `<img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=BAKONG_KHQR_KHMER_BANK_ID_12345" style="width:100%; height:100%;">`;
+    logActivity("Phase 19: Generated interoperable KHQR for merchant payment.");
+}
+
+// Global listener for Phase 19
 document.addEventListener('click', (e) => {
-    if (e.target && e.target.nodeName === "LI" && e.target.textContent.includes("Phase 18")) {
-        renderPhase18Details();
-        document.getElementById('phase18Section').scrollIntoView({ behavior: 'smooth' });
+    if (e.target && e.target.nodeName === "LI" && e.target.textContent.includes("Phase 19")) {
+        renderPhase19Details();
+        document.getElementById('phase19Section').scrollIntoView({ behavior: 'smooth' });
     }
 });
