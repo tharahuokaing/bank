@@ -73,4 +73,5 @@ document.addEventListener('click', (e) => {
         renderPhase11Details();
         document.getElementById('phase11Section').scrollIntoView({ behavior: 'smooth' });
     }
+
 });
