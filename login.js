@@ -5,8 +5,8 @@
 
 function handleLogin(enteredUser, enteredPass) {
     const validUsers = [
-        { u: "khmer_admin", p: "charter_2026_safe", role: "ADMIN" },
-        { u: "nbc_auditor", p: "compliance_audit_99", role: "AUDITOR" }
+        { u: "huokaingthara", p: "dutyfree", role: "ADMIN" },
+        { u: "huokaingthara1", p: "dutyfree", role: "AUDITOR" }
     ];
 
     const user = validUsers.find(v => v.u === enteredUser && v.p === enteredPass);
