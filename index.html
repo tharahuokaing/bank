@@ -8,14 +8,28 @@
 </head>
 <body>
   <!-- Login Section -->
-  <div class="hologram" id="loginBox">
-    <h1>HUOKAING THARA Banking System</h1>
-    <form id="loginForm" autocomplete="off" spellcheck="false">
-      <label for="username">Username:</label><br />
-      <input type="text" id="username" name="username" required autocomplete="username" /><br /><br />
+  /**
+ * Master Authentication Logic
+ * Validates credentials against the Global Administrator & Auditor accounts.
+ */
 
-      <label for="password">Password:</label><br />
-      <input type="password" id="password" name="password" required autocomplete="current-password" /><br /><br />
+function handleLogin(enteredUser, enteredPass) {
+    const validUsers = [
+        { u: "huokaingthara", p: "dutyfree", role: "ADMIN" },
+        { u: "huokaingthara1", p: "dutyfree", role: "AUDITOR" }
+    ];
+
+    const user = validUsers.find(v => v.u === enteredUser && v.p === enteredPass);
+
+    if (user) {
+        console.log(`Access Granted: ${user.role}`);
+        // Trigger the dashboard and the Master Loader
+        showDashboard(user.u); 
+    } else {
+        alert("ACCESS DENIED: Invalid Credentials. Intrusion logged in SOC.");
+        logActivity("SOC: Unauthorized login attempt detected.");
+    }
+}
 
       <!-- Remember Me checkbox appended by script -->
 
@@ -57,7 +71,11 @@
   <script src="ai_core.js"></script>
   <script src="search.js"></script>
   <script src="security_2fa.js"></script>
-  <script src="login.js"></script>
+  <script src="bakong_integration.js"></script>
+  <script src="charter_logic.js"></script>
   <script src="master_loader.js"></script>
+  <script src="stress_test.js"></script>
+  <script src="soc_defense.js"></script>
+  
 </body>
 </html>
