@@ -4,10 +4,10 @@
  */
 
 const projectPhases = [
-    "script.js", "script2.js", "script3.js", "script4.js", 
-    "script5.js", "script6.js", "script7.js", "script8.js",
-    "script9.js", "script10.js", "script11.js", "script12.js",
-    "script13.js", "script14.js", "script15.js", "script16.js",
+    "phase.js", "phase1.js", "phase2.js", "phase3.js", "phase4.js", 
+    "phase5.js", "phase6.js", "phase7.js", "phase8.js",
+    "phase9.js", "phase10.js", "phase11.js", "phase12.js",
+    "phase13.js", "phase14.js", "phase15.js", "phase16.js",
     "stress_test.js", "investor_relations.js", "bakong_integration.js", 
     "soc_defense.js", "charter_logic.js", "search.js", "ai_core.js", "security_2fa.js"
 ];
