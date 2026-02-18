@@ -9,32 +9,30 @@
 <body>
 
   <div class="hologram">
-  <h1>Huokaing Thara Bank System</h1>
-  <form class="login-form">
-    <input type="text" placeholder="Username">
-    <input type="password" placeholder="Password">
-    <button type="submit">Login</button>
-  </form>
-  <div class="ai-recommend">
-    <h3>AI Recommendations</h3>
-    <p>💡 Enable biometric login for faster access.</p>
-    <p>📊 Savings progress bar is at 70% of your monthly goal.</p>
-    <p>🔒 Security tip: Update your password every 90 days.</p>
+    <h1>Huokaing Thara Bank System</h1>
+    <form class="login-form">
+      <input type="text" placeholder="Username">
+      <input type="password" placeholder="Password">
+      <button type="submit">Login</button>
+    </form>
+    <div class="ai-recommend">
+      <h3>AI Recommendations</h3>
+      <p>💡 Enable biometric login for faster access.</p>
+      <p>📊 Savings progress bar is at 70% of your monthly goal.</p>
+      <p>🔒 Security tip: Update your password every 90 days.</p>
+    </div>
+    <!-- Music control button -->
+    <button class="music-toggle" onclick="toggleMusic()">🔊 Toggle Music</button>
   </div>
-</div>
 
-<!-- Hidden YouTube background music -->
-<iframe 
-  width="0" height="0"
-  src="https://www.youtube.com/embed/9pxH1wMPfOA?autoplay=1&loop=1&playlist=9pxH1wMPfOA"
-  frameborder="0"
-  allow="autoplay"
-></iframe>
+  <!-- Background music (replace with your MP3 file path) -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="your-song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
-    <p id="loginMessage" class="login-message" role="alert" aria-live="assertive"></p>
-    
-    <div id="systemHeartbeat"></div>
-  </div>
+  <p id="loginMessage" class="login-message" role="alert" aria-live="assertive"></p>
+  <div id="systemHeartbeat"></div>
 
   <div class="hologram" id="summaryBox" style="display:none;">
     <header style="text-align: center;">
@@ -43,10 +41,7 @@
     </header>
 
     <div id="searchContainer"></div>
-
-    <ol id="phasesList" aria-label="Project Phases" style="text-align: left; max-width: 680px; margin: 1rem auto 2rem auto;">
-      </ol>
-
+    <ol id="phasesList" aria-label="Project Phases" style="text-align: left; max-width: 680px; margin: 1rem auto 2rem auto;"></ol>
     <section id="phaseChecklistContainer" style="text-align:left; max-width:680px; margin: 0 auto 2rem auto;"></section>
 
     <div style="text-align: center;">
@@ -54,6 +49,7 @@
     </div>
   </div>
 
+  <!-- Scripts -->
   <script src="login.js"></script>
   <script src="ai_core.js"></script>
   <script src="search.js"></script>
@@ -68,7 +64,6 @@
   <script src="phase6.js"></script>
   <script src="phase7.js"></script>
   <script src="phase8.js"></script>
-  <script src="phase8.js"></script> 
   <script src="phase9.js"></script>
   <script src="phase10.js"></script>
   <script src="phase11.js"></script>
@@ -82,6 +77,13 @@
   <script src="charter_logic.js"></script>
   <script src="stress_test.js"></script>
   <script src="soc_defense.js"></script>
+
+  <script>
+    function toggleMusic() {
+      const audio = document.getElementById("bgMusic");
+      audio.muted = !audio.muted;
+    }
+  </script>
 
 </body>
 </html>
