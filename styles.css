@@ -6,7 +6,7 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center; /* Center vertically */
+  align-items: center;
   font-family: 'Orbitron', monospace, sans-serif;
   color: #0ff;
   background: #000;
@@ -57,9 +57,7 @@ body::after {
   background: rgba(0, 255, 255, 0.08);
   backdrop-filter: blur(15px);
   border: 2px solid rgba(0, 255, 255, 0.6);
-  box-shadow:
-    0 0 25px #0ff,
-    inset 0 0 15px #0ff;
+  box-shadow: 0 0 25px #0ff, inset 0 0 15px #0ff;
   border-radius: 20px;
   padding: 2rem;
   max-width: 500px;
@@ -155,16 +153,11 @@ button:hover {
   color: #0ff;
 }
 
-/* Responsive tweaks */
-@media (max-width: 750px) {
-  .hologram {
-    padding: 1.5rem;
-    width: 95%;
-  }
-  .hologram h1 {
-    font-size: 2.2rem;
-  }
-}  text-align: left;
+/* Profile, dashboard, bank info containers */
+#profileBox,
+#dashboard,
+#globalBankInfo {
+  text-align: left;
   margin-top: 20px;
   max-width: 800px;
   margin-left: auto;
@@ -191,25 +184,6 @@ button:hover {
   font-size: 0.9rem;
   color: #0ff;
   text-shadow: 0 0 6px #0ff;
-}
-
-/* Buttons */
-button {
-  background: rgba(0, 255, 255, 0.15);
-  border: 1px solid #0ff;
-  padding: 0.8em 2em;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 20px;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  color: #0ff;
-  font-size: 1rem;
-}
-
-button:hover {
-  background: rgba(0, 255, 255, 0.35);
-  box-shadow: 0 0 15px #0ff;
 }
 
 /* Inputs */
@@ -253,6 +227,25 @@ input:focus {
   100% { filter: brightness(1.5); }
 }
 
+/* Music toggle button */
+.music-toggle {
+  background: rgba(0, 255, 255, 0.15);
+  border: 1px solid #0ff;
+  padding: 0.6em 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  color: #0ff;
+  font-size: 0.9rem;
+}
+
+.music-toggle:hover {
+  background: rgba(0, 255, 255, 0.35);
+  box-shadow: 0 0 12px #0ff;
+}
+
 /* Responsive tweaks */
 @media (max-width: 750px) {
   .hologram {
@@ -263,8 +256,9 @@ input:focus {
     width: 100%;
     margin-bottom: 12px;
   }
-  }
+}
 
+/* Music toggle button */
 .music-toggle {
   background: rgba(0, 255, 255, 0.15);
   border: 1px solid #0ff;
