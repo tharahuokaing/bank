@@ -264,3 +264,21 @@ input:focus {
     margin-bottom: 12px;
   }
   }
+
+.music-toggle {
+  background: rgba(0, 255, 255, 0.15);
+  border: 1px solid #0ff;
+  padding: 0.6em 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  color: #0ff;
+  font-size: 0.9rem;
+}
+
+.music-toggle:hover {
+  background: rgba(0, 255, 255, 0.35);
+  box-shadow: 0 0 12px #0ff;
+}
