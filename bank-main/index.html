@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HUOKAING THARA Banking System</title>
+
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Referrer-Policy" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ===================================== -->
+  <!-- SYSTEM BOOT SCREEN -->
+  <!-- ===================================== -->
+
+  <div id="bootScreen" class="boot-screen">
+    <h1>Huokaing Thara Bank Secure Environment</h1>
+    <p id="bootStatus">Initializing system modules...</p>
+  </div>
+
+  <!-- ===================================== -->
+  <!-- LOGIN SCREEN -->
+  <!-- ===================================== -->
+
+  <div class="hologram" id="loginContainer">
+
+    <h1>Huokaing Thara Banking System</h1>
+
+    <form id="loginForm" class="login-form" autocomplete="off">
+      <input id="usernameInput" type="text" placeholder="Username" required />
+      <input id="passwordInput" type="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+
+    <p id="loginMessage"
+       class="login-message"
+       role="alert"
+       aria-live="assertive"></p>
+
+    <div class="ai-recommend">
+      <h3>AI Recommendations</h3>
+      <p>🔐 Multi-Factor Authentication Enabled</p>
+      <p>📊 Liquidity Monitoring Active</p>
+      <p>🛡 SOC Defensive Layer Online</p>
+    </div>
+
+  </div>
+
+  <!-- ===================================== -->
+  <!-- DASHBOARD -->
+  <!-- ===================================== -->
+
+  <div class="hologram dashboard" id="summaryBox" hidden>
+
+    <header class="dashboard-header">
+      <h1>Enterprise Banking Control Panel</h1>
+      <div id="aiStatusBubble" class="ai-bubble"></div>
+    </header>
+
+    <!-- Command Console injected here -->
+    <div id="searchContainer"></div>
+
+    <ol id="phasesList"
+        aria-label="Project Phases"
+        class="phases-list"></ol>
+
+    <section id="phaseChecklistContainer"
+             class="phase-checklist"></section>
+
+    <div class="dashboard-controls">
+      <button id="logoutBtn">Logout</button>
+    </div>
+
+  </div>
+
+  <!-- ===================================== -->
+  <!-- SYSTEM HEARTBEAT -->
+  <!-- ===================================== -->
+
+  <div id="systemHeartbeat" class="heartbeat-indicator"></div>
+
+  <!-- ===================================== -->
+  <!-- MASTER BOOTLOADER (ONLY SCRIPT LOADED) -->
+  <!-- ===================================== -->
+
+  <script src="js/master_loader.js"></script>
+
+  <!-- ===================================== -->
+  <!-- INITIALIZATION -->
+  <!-- ===================================== -->
+
+  <script>
+    /* ------------------------------
+       Boot Status Listener
+    ------------------------------ */
+
+    document.addEventListener("bankSystemReady", () => {
+      document.getElementById("bootStatus").textContent =
+        "All modules initialized successfully.";
+      setTimeout(() => {
+        document.getElementById("bootScreen").style.display = "none";
+      }, 1000);
+    });
+
+    /* ------------------------------
+       Login Binding
+    ------------------------------ */
+
+    document.getElementById("loginForm")
+      .addEventListener("submit", async (e) => {
+
+        e.preventDefault();
+
+        const username =
+          document.getElementById("usernameInput").value.trim();
+        const password =
+          document.getElementById("passwordInput").value.trim();
+
+        if (typeof handleLogin === "function") {
+          await handleLogin(username, password);
+        }
+      });
+
+    /* ------------------------------
+       Session Restore
+    ------------------------------ */
+
+    window.addEventListener("load", () => {
+
+      if (typeof getSession === "function") {
+        const session = getSession();
+        if (session) {
+          showDashboard(session.username);
+        }
+      }
+
+      if (typeof startAiMonitoring === "function") {
+        startAiMonitoring();
+      }
+    });
+
+    /* ------------------------------
+       Logout Binding
+    ------------------------------ */
+
+    document.addEventListener("click", (e) => {
+      if (e.target.id === "logoutBtn") {
+        if (typeof logout === "function") logout();
+      }
+    });
+  </script>
+
+</body>
+</html>
