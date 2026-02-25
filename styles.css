@@ -1,0 +1,353 @@
+/* =====================================================
+   KHMER BANK ENTERPRISE DESIGN SYSTEM
+   Secure Fintech UI Framework
+===================================================== */
+
+/* ---------------------------
+   ROOT VARIABLES
+--------------------------- */
+
+:root {
+
+  --bg-main: #0a0f14;
+  --bg-panel: #111922;
+  --bg-elevated: #182430;
+
+  --accent-primary: #00e5ff;
+  --accent-secondary: #00ff88;
+  --accent-warning: #f1c40f;
+  --accent-danger: #ff4d4d;
+
+  --text-main: #e6f1ff;
+  --text-muted: #8aa4c1;
+
+  --border-color: #1f2d3a;
+
+  --radius: 10px;
+  --transition: 0.25s ease;
+}
+
+/* ---------------------------
+   GLOBAL RESET
+--------------------------- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* ---------------------------
+   BOOT SCREEN
+--------------------------- */
+
+.boot-screen {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  color: var(--accent-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  text-align: center;
+}
+
+.boot-screen h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+/* ---------------------------
+   HOLOGRAM PANELS
+--------------------------- */
+
+.hologram {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 25px;
+  max-width: 850px;
+  margin: 40px auto;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.08);
+  transition: var(--transition);
+}
+
+.hologram:hover {
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.2);
+}
+
+/* ---------------------------
+   LOGIN
+--------------------------- */
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.login-form input {
+  padding: 12px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.login-form input:focus {
+  border-color: var(--accent-primary);
+  outline: none;
+}
+
+.login-form button {
+  padding: 12px;
+  background: var(--accent-primary);
+  border: none;
+  color: #000;
+  font-weight: bold;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.login-form button:hover {
+  background: #00bcd4;
+}
+
+.login-message {
+  margin-top: 10px;
+  color: var(--accent-danger);
+}
+
+/* ---------------------------
+   AI BUBBLE
+--------------------------- */
+
+.ai-bubble {
+  margin-top: 10px;
+  font-style: italic;
+  color: var(--accent-primary);
+}
+
+/* ---------------------------
+   DASHBOARD
+--------------------------- */
+
+.dashboard {
+  margin-top: 20px;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.dashboard-controls {
+  text-align: center;
+  margin-top: 25px;
+}
+
+/* ---------------------------
+   PHASE LIST
+--------------------------- */
+
+.phases-list {
+  list-style: decimal;
+  padding-left: 20px;
+  max-width: 680px;
+  margin: 0 auto 30px auto;
+}
+
+.phases-list li {
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--text-muted);
+}
+
+.phases-list li:hover {
+  color: var(--accent-primary);
+}
+
+/* ---------------------------
+   PHASE DETAIL BOX
+--------------------------- */
+
+.phase-detail-box {
+  background: var(--bg-elevated);
+  border-left: 4px solid var(--accent-primary);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: var(--radius);
+}
+
+/* ---------------------------
+   BUTTONS
+--------------------------- */
+
+button {
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* ---------------------------
+   COMMAND CONSOLE
+--------------------------- */
+
+.command-search {
+  background: var(--bg-elevated);
+  padding: 15px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.command-search input {
+  width: 100%;
+  padding: 10px;
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+  color: var(--accent-primary);
+  border-radius: var(--radius);
+}
+
+.command-results {
+  margin-top: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.command-result-item {
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.command-result-item:hover,
+.command-result-item.selected {
+  background: rgba(0, 229, 255, 0.1);
+}
+
+/* ---------------------------
+   2FA MODAL
+--------------------------- */
+
+.twofa-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.twofa-box {
+  background: var(--bg-panel);
+  padding: 25px;
+  width: 320px;
+  border-radius: var(--radius);
+  border: 1px solid var(--accent-primary);
+  text-align: center;
+}
+
+.twofa-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+  color: var(--accent-primary);
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.twofa-error {
+  color: var(--accent-danger);
+  min-height: 20px;
+}
+
+.twofa-timer {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ---------------------------
+   SOC THREAT COLORS
+--------------------------- */
+
+.severity-low { color: #2ecc71; }
+.severity-medium { color: #f1c40f; }
+.severity-high { color: #e67e22; }
+.severity-critical {
+  color: var(--accent-danger);
+  font-weight: bold;
+}
+
+/* ---------------------------
+   HEARTBEAT INDICATOR
+--------------------------- */
+
+.heartbeat-indicator {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  width: 12px;
+  height: 12px;
+  background: var(--accent-secondary);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+/* ---------------------------
+   SCROLLBAR (FINTECH STYLE)
+--------------------------- */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 10px;
+}
+
+/* ---------------------------
+   RESPONSIVE
+--------------------------- */
+
+@media (max-width: 768px) {
+
+  .hologram {
+    margin: 20px;
+    padding: 18px;
+  }
+
+  .phases-list {
+    padding-left: 15px;
+  }
+}
