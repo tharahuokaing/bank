@@ -1,5 +1,5 @@
 /* =========================================================
-   KHMER BANK AUTHENTICATION CONTROLLER v4
+   HUOKAING THARA BANK AUTHENTICATION CONTROLLER v4
    Secure Login + Session + Lockout + 2FA Ready
 ========================================================= */
 
