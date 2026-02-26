@@ -1,6 +1,6 @@
 /**
  * Phase 1: Vision & Concept Development
- * Strategic foundation of Khmer Bank
+ * Strategic foundation of HUOKAING THARA Bank
  */
 
 const phase1Data = {
@@ -130,4 +130,5 @@ document.addEventListener("click", (e) => {
     if (text.startsWith("Phase 1")) {
         renderPhase1Details();
     }
+
 });
