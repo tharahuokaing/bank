@@ -26,7 +26,6 @@
     "charter_logic.js",
     "bakong_integration.js",
     "stress_test.js",
-    "phase_core.js",
 
     // Phases
     "phase1.js","phase2.js","phase3.js","phase4.js",
